@@ -31,52 +31,52 @@
                 <!-- bootstrap grids -->
                 <div class="container product-container">
                     <div id="card-list" class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 row-cols-xl-5">
-                        <div id="digiMart01" class="col mb-4">
+                        <div id="digimart01" class="col mb-4">
                             <div class="card text-center shadow border-2">
                                 <img src="./resources/images/iphone12Pro.jpg" class="card-img-top" alt="...">
                                 <div class="card-body">
                                     <h5 class="card-title">iPhone12 Pro 128GB</h5>
-                                    <h6 class="card-subtitle mb-2"><small>$ 1,000.00</small></h6>
+                                    <h6 class="card-subtitle mb-2" id="1000"><small>$ 1,000.00</small></h6>
                                     <ul class="list-group list-group-flush">
                                     <li class="list-group-item ps-0 pe-0">
                                         <input type="number" id="digimart01-quantity" value="1">
                                     </li>
                                     <li class="list-group-item ps-0 pe-0">
-                                        <button id="digimark01-addtocart}" onclick="addToCart(event)" class="add-to-cart-button">Add to cart</button>
+                                        <button id="digimart01-addtocart}" onclick="addToCart(event)" class="add-to-cart-button">Add to cart</button>
                                     </li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
-                        <div id="digiMart02" class="col mb-4">
+                        <div id="digimart02" class="col mb-4">
                             <div class="card text-center shadow border-2">
                                 <img src="./resources/images/ipadPro11.jpg" class="card-img-top" alt="...">
                                 <div class="card-body">
                                     <h5 class="card-title">iPad Pro 11 128GB</h5>
-                                    <h6 class="card-subtitle mb-2"><small>$ 1,100.00</small></h6>
+                                    <h6 class="card-subtitle mb-2" id="1100"><small>$ 1,100.00</small></h6>
                                     <ul class="list-group list-group-flush">
                                     <li class="list-group-item ps-0 pe-0">
-                                        <input type="number" id="digimart01-quantity" value="1">
+                                        <input type="number" id="digimart02-quantity" value="1">
                                     </li>
                                     <li class="list-group-item ps-0 pe-0">
-                                        <button id="digimark02-addtocart}" onclick="addToCart(event)" class="add-to-cart-button">Add to cart</button>
+                                        <button id="digimart02-addtocart}" onclick="addToCart(event)" class="add-to-cart-button">Add to cart</button>
                                     </li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
-                        <div id="digiMart03" class="col mb-4">
+                        <div id="digimart03" class="col mb-4">
                             <div class="card text-center shadow border-2">
                                 <img src="./resources/images/macPro2021.jpg" class="card-img-top" alt="...">
                                 <div class="card-body">
                                     <h5 class="card-title">mac Pro 2021 128GB</h5>
-                                    <h6 class="card-subtitle mb-2"><small>$ 1,600.00</small></h6>
+                                    <h6 class="card-subtitle mb-2" id="1600"><small>$ 1,600.00</small></h6>
                                     <ul class="list-group list-group-flush">
                                     <li class="list-group-item ps-0 pe-0">
-                                        <input type="number" id="digimart01-quantity" value="1">
+                                        <input type="number" id="digimart03-quantity" value="1">
                                     </li>
                                     <li class="list-group-item ps-0 pe-0">
-                                        <button id="digimark03-addtocart}" onclick="addToCart(event)" class="add-to-cart-button">Add to cart</button>
+                                        <button id="digimart03-addtocart}" onclick="addToCart(event)" class="add-to-cart-button">Add to cart</button>
                                     </li>
                                     </ul>
                                 </div>
@@ -110,7 +110,7 @@
                     <div class="col-8 text-end border border-top-0 border-start-1 border-bottom-1 border-end-0 border-secondary">
                         Total
                         </div>
-                        <div class="col-4 border border-top-0 border-start-1 border-bottom-1 border-end-1 border-secondary">
+                        <div id ="total-price" class="col-4 border border-top-0 border-start-1 border-bottom-1 border-end-1 border-secondary">
                         </div>
                 </div>
             </div>

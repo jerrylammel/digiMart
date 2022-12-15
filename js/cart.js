@@ -45,7 +45,7 @@ class CartManager {
                             $${product.total}
                             </div>
                             <div class="col-2 border border-top-0 border-start-1 border-bottom-1 border-end-1 border-secondary">
-                                <button class="btn-remove" id="${product.id}-remove">Remove</button>
+                                <button class="btn-remove" id="${product.id}-remove" onclick="onRemoveProductFromCart(event)">Remove</button>
                             </div>`;
 
         return productDiv;
@@ -87,11 +87,26 @@ class CartManager {
     }
 
     removeProduct(productId) {
+        const indexOfProduct = this._products.findIndex((nextProduct) => nextProduct.id === productId);
+        if (indexOfProduct === -1) {
+            return;
+        }
 
+        this._products.splice(indexOfProduct, 1);
+        localStorage.removeItem(productId);
     }
 
     removepProductHtml(productId) {
+        const productElement = document.getElementById(`${productId}-item`);
+        if (productElement === null) {
+            return;
+        }
 
+        if (productElement.parentNode) {
+            productElement.parentNode.removeChild(productElement);
+        } else {
+            console.log("something wrong, a product element must have its parent!");
+        }
     }
 
     loadStoredProducts() {

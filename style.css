@@ -165,14 +165,23 @@ main {
     margin: 0.2rem;
 }
 
-
-
     /* cart */
 #cart {
     position: relative;
     background-color: var(--background-color-cart);
     height: 40vh;
-    text-align: left;
+    /* text-align: left; */
+}
+
+.btn-remove {
+    padding: 0rem 0.4rem;
+    font-size: 0.8rem;
+    color: orange;
+}
+
+.btn-remove:hover {
+    color: whitesmoke;
+    background-color: red;
 }
 
 /* footer */

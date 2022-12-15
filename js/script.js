@@ -42,6 +42,16 @@ window.addToCart = function (event) {
     }
 }
 
+
+window.onRemoveProductFromCart = function (event) {
+    event.preventDefault();
+    // get digimark02 from id digimark02-remove
+    const productId = event.target.id.split('-')[0];
+    myCart.removeProduct(productId);
+    myCart.removepProductHtml(productId);
+    myCart.updateTotalOfAllItems();
+}
+
 const myCart = new CartManager('digiMart');
 myCart.loadStoredProducts();
 const allProductsInCart = myCart.getAllProducts;

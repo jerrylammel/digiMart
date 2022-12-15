@@ -178,6 +178,18 @@ main {
     text-align: left;
 }
 
+#cart-header {
+    display: flex;
+    align-items: baseline;
+}
+
+.fa-shopping-cart {
+    width: 2rem;
+    margin: 0.5rem 1rem;
+    color: var(--color-greeting);
+    font-size: 2rem;
+}
+
 .btn-remove {
     padding: 0rem 0.4rem;
     font-size: 0.8rem;

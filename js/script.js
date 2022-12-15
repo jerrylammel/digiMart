@@ -43,3 +43,6 @@ window.addToCart = function (event) {
 }
 
 const myCart = new CartManager('digiMart');
+myCart.loadStoredProducts();
+const allProductsInCart = myCart.getAllProducts;
+myCart.addAllProductsFromLocalStorage(allProductsInCart);

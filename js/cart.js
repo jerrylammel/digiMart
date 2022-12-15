@@ -68,7 +68,7 @@ class CartManager {
         const index = this._products.findIndex((product) => product.id === productObj.id);
         this._products[index].quantity = productObj.quantity;
         this._products[index].total = productObj.total;
-        
+
         return productObj;
     }
 
@@ -95,10 +95,26 @@ class CartManager {
     }
 
     loadStoredProducts() {
-
+        const regex = /digimart\d+/;
+        for (let index = 0; index < localStorage.length; index++) {
+            const keyValue = localStorage.key(index); 
+            if ((undefined !== keyValue && (null !== keyValue))) {
+                if (null !== keyValue.match(regex)) {
+                    const storedItem = localStorage.getItem(keyValue);
+                    const productObj = JSON.parse(storedItem);
+                    this._products.push(productObj);
+                }
+            }
+        }
     }
 
     addAllProductsFromLocalStorage (allProducts) {
+        allProducts.forEach(product => {
+            const pHTML = this.addProductHTML(product);
+            this.renderProduct(pHTML);
+        });  
+
+        this.updateTotalOfAllItems();
     }
     
 }

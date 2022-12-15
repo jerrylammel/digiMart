@@ -28,14 +28,14 @@ html {
 header {
     color: var(--color-text-default);
     background-color: var(--background-color-header);
-    height: 80px;
+    height: 4rem;
     width: 100%;
     position: fixed;
     z-index: 100;
 }
 
 .header-container {
-    margin: 0em 5em;
+    margin: 0rem 5rem;
     min-width: auto;
     max-height: auto;
 }
@@ -54,19 +54,19 @@ header {
 }
 
 .header-container #logo {
-    width: 100px;
-    height: 70px;
+    width: 4.5rem;
+    height: 3.5rem;
 }
 
 .header-container #contact {
-    width: 50px;
-    height: 50px;
+    width: 4rem;
+    height: 3.5rem;
 }
 
 /* Main */
 main {
     height: 100vh;
-    top: 80px;
+    top: 4rem;
     position: relative;
 }
     /* products */
@@ -84,8 +84,8 @@ main {
     color: var(--color-text-default);
     background-color: var(--background-color-greeting);
     padding: 0.5rem;
-    position: absolute;
-    top: 10%;
+    position: relative;
+    top: 1rem;
     left: 50%;
     transform: translate(-50%);    
     width: 100%;
@@ -98,17 +98,81 @@ main {
 }
 
 #products-container {
+    position: relative;
+    margin: 2rem 1rem 1rem 1rem;
+}
+
+#product-container {
+    display: flex;
     padding: 2rem;
     height: 50vh;
     overflow-y: scroll;
     background-color: var(--background-color-products);
 }
 
+.card {
+    opacity: 0.85;
+    transition: all 0.3s ease-in-out;
+}
+
+.card:hover {
+    scale: 1.2;
+    box-shadow: 0.5rem 0.5rem 0.5rem rgba(240, 198, 15, 0.8);
+    margin: 0.5rem;   
+    opacity: 1;
+}
+
+.card-img-top {
+    height: 16rem;
+    width: auto;
+}
+
+.card-title {
+    font-size: 1rem;
+}
+
+.card .custom-select, .card input {
+    font-size: 0.8rem;
+}
+
+.custom-select {
+    width: calc(60% - 0.5rem);
+}
+
+.card-body {
+    padding: 0.5rem 1rem;
+}
+
+.card input {
+    width: calc(60% - 0.5rem);;
+}
+
+.add-to-cart-button { 
+    padding: 0.2rem 0.4rem;
+    font-size: 0.6rem;
+    font-weight: bold;
+    border-radius: 0.4rem;
+    background-color: var(--background-color-addtocart);
+    box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.5);
+}
+
+.add-to-cart-button:hover {
+    --background-color-addtocart: #AED5B3;
+    background-color:var(--background-color-addtocart-hover) !important;
+    color: whitesmoke !important;
+    transition: all 0.2s ease-in-out;
+    scale: 1.2;
+    margin: 0.2rem;
+}
+
+
+
     /* cart */
 #cart {
     position: relative;
     background-color: var(--background-color-cart);
     height: 40vh;
+    text-align: left;
 }
 
 /* footer */

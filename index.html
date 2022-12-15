@@ -15,7 +15,7 @@
         <div class="header-container">
             <nav class="navigation">
                 <ul class="d-flex justify-content-between">
-                    <li class="fs-4 align-self-center"><a href="#"><img src="#" alt="digiMart Logo" id="logo"></a></li>
+                    <li class="fs-4 align-self-center"><a href="#">digiMart&#8482</a></li>
                     <li class="fs-4 align-self-center"><a href="#">About</a></li>
                     <li class="fs-4 align-self-center"><a href="#">Contact<img src="resources/images/instagram_logo.png" alt="Contact Icon" id="contact"></a></li>
                 </ul>
@@ -25,20 +25,100 @@
     <main>
         <section id="products">
             <div id="greeting">
-                <h4>Welcome to <span>&copydigiMart</span> !</h2>
-                <h4>Wish you enjoy our great products !</h2>
+                <h4>Welcome to <span>digiMart&#8482</span> ! Wish you enjoy our great products !</h4>
             </div>
             <div id="products-container">
-                
+                <!-- bootstrap grids -->
+                <div class="container product-container">
+                    <div id="card-list" class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 row-cols-xl-5">
+                        <div id="digiMart01" class="col mb-4">
+                            <div class="card text-center shadow border-2">
+                                <img src="./resources/images/iphone12Pro.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">iPhone12 Pro 128GB</h5>
+                                    <h6 class="card-subtitle mb-2"><small>$ 1,000.00</small></h6>
+                                    <ul class="list-group list-group-flush">
+                                    <li class="list-group-item ps-0 pe-0">
+                                        <input type="number" id="digimart01-quantity" value="1">
+                                    </li>
+                                    <li class="list-group-item ps-0 pe-0">
+                                        <button id="digimark01-addtocart}" onclick="addToCart(event)" class="add-to-cart-button">Add to cart</button>
+                                    </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="digiMart02" class="col mb-4">
+                            <div class="card text-center shadow border-2">
+                                <img src="./resources/images/ipadPro11.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">iPad Pro 11 128GB</h5>
+                                    <h6 class="card-subtitle mb-2"><small>$ 1,100.00</small></h6>
+                                    <ul class="list-group list-group-flush">
+                                    <li class="list-group-item ps-0 pe-0">
+                                        <input type="number" id="digimart01-quantity" value="1">
+                                    </li>
+                                    <li class="list-group-item ps-0 pe-0">
+                                        <button id="digimark02-addtocart}" onclick="addToCart(event)" class="add-to-cart-button">Add to cart</button>
+                                    </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="digiMart03" class="col mb-4">
+                            <div class="card text-center shadow border-2">
+                                <img src="./resources/images/macPro2021.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">mac Pro 2021 128GB</h5>
+                                    <h6 class="card-subtitle mb-2"><small>$ 1,600.00</small></h6>
+                                    <ul class="list-group list-group-flush">
+                                    <li class="list-group-item ps-0 pe-0">
+                                        <input type="number" id="digimart01-quantity" value="1">
+                                    </li>
+                                    <li class="list-group-item ps-0 pe-0">
+                                        <button id="digimark03-addtocart}" onclick="addToCart(event)" class="add-to-cart-button">Add to cart</button>
+                                    </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>  
+                </div>                 
             </div>
         </section>
         <section id="cart">
-
+            <h4>Order detail</h4>
+            <div id="shopping-list" class="container text-start">
+                <div id="table-header" class="row fw-bold">
+                    <div class="col-4 border border-top-1 border-start-1 border-bottom-1 border-end-0 border-secondary">
+                    Item Name
+                    </div>
+                    <div class="col-2 border border-top-1 border-start-1 border-bottom-1 border-end-0 border-secondary">
+                    Quantity
+                    </div>
+                    <div class="col-2 border border-top-1 border-start-1 border-bottom-1 border-end-0 border-secondary">
+                    Price
+                    </div>
+                    <div class="col-2 border border-top-1 border-start-1 border-bottom-1 border-end-0 border-secondary">
+                    Tototal
+                    </div>
+                    <div class="col-2 border border-top-1 border-start-1 border-bottom-1 border-end-1 border-secondary">
+                    Action
+                    </div>
+                </div>
+                <div id="table-total" class="row">
+                    <div class="col-8 text-end border border-top-0 border-start-1 border-bottom-1 border-end-0 border-secondary">
+                        Total
+                        </div>
+                        <div class="col-4 border border-top-0 border-start-1 border-bottom-1 border-end-1 border-secondary">
+                        </div>
+                </div>
+            </div>
         </section>
     </main>
     <footer>
         <ul>
-            <li style="color: white">&copydigitMart.com</li>
+            <li style="color: white">&copy digitMart.com</li>
             <li>|</li>
             <li>Design   by   Jerry</li>
             <li>|</li>

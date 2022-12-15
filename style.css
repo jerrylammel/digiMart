@@ -14,12 +14,13 @@ html {
 /* color settings */
 :root {
     --color-text-default: #232323;
-    --backgrouond-color-body: #5776a8;
-    --background-color-header: #a88957;
-    --background-color-products: #aebdd5;
-    --background-color-greeting: #a88957;
-    --background-color-cart:  #D5C6AE;
-    --background-color-footer: #a88957;
+    --backgrouond-color-body: #aebdd5;
+    --background-color-header: #E8E0DA;
+    --background-color-products: #8C8C8C;
+    --background-color-greeting: #E8E0DA;
+    --color-greeting: #FF914D;
+    --background-color-cart:  #C0C0C0;
+    --background-color-footer: #E8E0DA;
     --background-color-addtocart: #AED5B3;
     --background-color-addtocart-hover: #198754;
 }
@@ -56,11 +57,14 @@ header {
 .header-container #logo {
     width: 4.5rem;
     height: 3.5rem;
+    color: var(--color-greeting);
+    font-weight: bold;
 }
 
 .header-container #contact {
     width: 4rem;
     height: 3.5rem;
+    font-weight: bold;
 }
 
 /* Main */
@@ -94,7 +98,8 @@ main {
 }
 
 #greeting span {
-    color: whitesmoke;
+    color: var(--color-greeting);
+    font-weight: bold;
 }
 
 #products-container {
@@ -116,7 +121,7 @@ main {
 }
 
 .card:hover {
-    scale: 1.2;
+    scale: 1.1;
     box-shadow: 0.5rem 0.5rem 0.5rem rgba(240, 198, 15, 0.8);
     margin: 0.5rem;   
     opacity: 1;
@@ -169,8 +174,8 @@ main {
 #cart {
     position: relative;
     background-color: var(--background-color-cart);
-    height: 40vh;
-    /* text-align: left; */
+    height: 35vh;
+    text-align: left;
 }
 
 .btn-remove {
@@ -185,6 +190,15 @@ main {
 }
 
 /* footer */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 200;
+    color: var(--color-text-default);
+    background-color: var(--background-color-footer);
+}
+
 footer ul {
     display: flex;
     justify-content: center;
@@ -200,4 +214,9 @@ footer li {
     font-size: small;
     letter-spacing: 1px;
     margin: 0 0.5rem;
+}
+
+#digitmart-dot-com {
+    color: var(--color-greeting);
+    font-weight: bold;
 }

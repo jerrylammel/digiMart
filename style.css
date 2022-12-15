@@ -11,3 +11,120 @@ html {
     text-align: center; 
 }
 
+/* color settings */
+:root {
+    --color-text-default: #232323;
+    --backgrouond-color-body: #5776a8;
+    --background-color-header: #a88957;
+    --background-color-products: #aebdd5;
+    --background-color-greeting: #a88957;
+    --background-color-cart:  #D5C6AE;
+    --background-color-footer: #a88957;
+    --background-color-addtocart: #AED5B3;
+    --background-color-addtocart-hover: #198754;
+}
+
+/* header */
+header {
+    color: var(--color-text-default);
+    background-color: var(--background-color-header);
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+}
+
+.header-container {
+    margin: 0em 5em;
+    min-width: auto;
+    max-height: auto;
+}
+
+.header-container ul {
+    list-style: none;
+}
+
+.header-container li {
+    display: inline;
+}
+
+.header-container a {
+    text-decoration: none;
+    color: var(--color-text-default);
+}
+
+.header-container #logo {
+    width: 100px;
+    height: 70px;
+}
+
+.header-container #contact {
+    width: 50px;
+    height: 50px;
+}
+
+/* Main */
+main {
+    height: 100vh;
+    top: 80px;
+    position: relative;
+}
+    /* products */
+#products {
+    position: relative;
+    background-color: var(--background-color-products);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;;
+}
+
+#greeting {
+    font-size: 2rem;
+    text-align: center;
+    color: var(--color-text-default);
+    background-color: var(--background-color-greeting);
+    padding: 0.5rem;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%);    
+    width: 100%;
+    box-shadow: 5px 5px 10px 2px rgba(0,0,0,.8);
+    opacity: 0.9;
+}
+
+#greeting span {
+    color: whitesmoke;
+}
+
+#products-container {
+    padding: 2rem;
+    height: 50vh;
+    overflow-y: scroll;
+    background-color: var(--background-color-products);
+}
+
+    /* cart */
+#cart {
+    position: relative;
+    background-color: var(--background-color-cart);
+    height: 40vh;
+}
+
+/* footer */
+footer ul {
+    display: flex;
+    justify-content: center;
+    background-color: var(--background-color-footer);
+    padding: 10px 5px;
+    margin-bottom: 0em;
+}
+
+footer li {
+    display: inline-block;
+    list-style: none;
+    color: var(--color-text-default);
+    font-size: small;
+    letter-spacing: 1px;
+    margin: 0 0.5rem;
+}

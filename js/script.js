@@ -24,14 +24,22 @@ window.addToCart = function (event) {
     productObj.id = productId;
     productObj.imgSrc = imgSrc;
     productObj.name = productName;
-    productObj.price = productPrice;
-    productObj.quantity = quantity;
-    productObj.total = productPrice * quantity;
+    productObj.price = new Number(productPrice);
+    productObj.quantity = new Number(quantity);
+    productObj.total = productObj.price * productObj.quantity;
 
-    myCart.addProduct(productObj);
-    const productHTML = myCart.addProductHTML(productObj);
-    myCart.renderProduct(productHTML);
+    const productInCart = myCart.getProduct(productObj.id);
+    if (productInCart.length !== 0) {
+        // same product is in shopping cart, upate quantity and totol price
+        const updatedProductObj = myCart.updateQuantityAndTotalPrice(productObj);
+        myCart.updateProductHTML(updatedProductObj);
+        myCart.updateTotalOfAllItems();
+    } else {
+        myCart.addProduct(productObj);
+        const productHTML = myCart.addProductHTML(productObj);
+        myCart.renderProduct(productHTML);
+        myCart.updateTotalOfAllItems();
+    }
 }
-
 
 const myCart = new CartManager('digiMart');

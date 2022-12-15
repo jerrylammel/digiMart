@@ -9,7 +9,7 @@ class CartManager {
     }
 
     getProduct (id) {
-
+        return this._products.filter((product) => product.id === id);
     }
 
     calculateTotolPrice() {
@@ -35,13 +35,13 @@ class CartManager {
         productDiv.innerHTML = `<div class="col-4 border border-top-0 border-start-1 border-bottom-1 border-end-0 border-secondary">
                             ${product.name}
                             </div>
-                            <div class="col-2 border border-top-0 border-start-1 border-bottom-1 border-end-0 border-secondary">
+                            <div id="${product.id}-item-quantity" class="col-2 border border-top-0 border-start-1 border-bottom-1 border-end-0 border-secondary">
                             ${product.quantity}
                             </div>
                             <div class="col-2 border border-top-0 border-start-1 border-bottom-1 border-end-0 border-secondary">
                             $${product.price}
                             </div>
-                            <div class="col-2 border border-top-0 border-start-1 border-bottom-1 border-end-0 border-secondary">
+                            <div id="${product.id}-item-total" class="col-2 border border-top-0 border-start-1 border-bottom-1 border-end-0 border-secondary">
                             $${product.total}
                             </div>
                             <div class="col-2 border border-top-0 border-start-1 border-bottom-1 border-end-1 border-secondary">
@@ -55,6 +55,31 @@ class CartManager {
         const shoppingList = document.getElementById("shopping-list");
         const tableTotal = document.getElementById("table-total");
         shoppingList.insertBefore(productDiv, tableTotal);
+    }
+
+    updateQuantityAndTotalPrice(product) {
+        const productToUpdate = localStorage.getItem(`${product.id}`);
+        const productObj = JSON.parse(productToUpdate);
+        productObj.quantity += product.quantity;
+        productObj.total += product.total;
+        const productStr = JSON.stringify(productObj);
+        localStorage.setItem(`${product.id}`, productStr);
+
+        const index = this._products.findIndex((product) => product.id === productObj.id);
+        this._products[index].quantity = productObj.quantity;
+        this._products[index].total = productObj.total;
+        
+        return productObj;
+    }
+
+    updateProductHTML(product) {
+        const itemQuantity = document.getElementById(`${product.id}-item-quantity`);
+        itemQuantity.innerText = product.quantity;
+        const itemTotal = document.getElementById(`${product.id}-item-total`);
+        itemTotal.innerText = `$${product.total}`;
+    }
+
+    updateTotalOfAllItems() {
         // update total price all items
         const totalPrice = this.calculateTotolPrice();
         const priceDiv = document.getElementById('total-price');

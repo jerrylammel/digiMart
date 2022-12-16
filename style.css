@@ -23,6 +23,7 @@ html {
     --background-color-footer: #E8E0DA;
     --background-color-addtocart: #AED5B3;
     --background-color-addtocart-hover: #198754;
+    --background-color-place-order: #198754;
 }
 
 /* header */
@@ -204,6 +205,14 @@ main {
 .btn-remove:hover {
     color: whitesmoke;
     background-color: red;
+}
+
+#digimart-place-order {
+    padding: 0rem 0.4rem;
+    font-size: 0.8rem;   
+    background-color: var(--background-color-place-order);
+    color: whitesmoke;
+    border-radius: 0.3rem; 
 }
 
 /* footer */

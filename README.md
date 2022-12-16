@@ -31,14 +31,16 @@ products to a shopping cart list
 modifying the total price of the cart
 7. The user should be able to enter a quantity for each product  
 
-###
-Overview of the implementation:
+## Implementation
+
+### Overview
+
 All shopping cart relevant functions are added into a class as an individual JS module.
 Information of products in the shopping cart is managed as an defined object, which is stored in localStorage as part of the shopping list.
 Product items added into the shopping cart will be loaded when the digiMart lanuch.
 Users can add a product into the shopping cart as many times as they want and quantity and total price of that product will be accumulated and updated.
 
-Details:
+### Details:
 1. Products are pre-populated. I hard coded HTML elements in the index.html file.
 2. To display products for the user to choose from, I use card component in Bootstrap when I hard coded HTML elements for products.
 3. With hard coded HTML elements for products, for sure they will be displaed when the page loads.

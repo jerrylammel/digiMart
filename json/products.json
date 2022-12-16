@@ -1,0 +1,26 @@
+[
+    {
+        "id": "digimart01",
+        "imgSrc": "./resources/images/iphone12Pro.jpg",
+        "name": "iPhone12 Pro 128GB",
+        "price": 1000,
+        "quantity": 1,
+        "total": 1000
+    },
+    {
+        "id": "digimart02",
+        "imgSrc": "./resources/images/ipadPro11.jpg",
+        "name": "iPad Pro 11 128GB",
+        "price": 1100,
+        "quantity": 1,
+        "total": 1100
+    },
+    {
+        "id": "digimart03",
+        "imgSrc": "./resources/images/macPro2021.jpg",
+        "name": "mac Pro 2021 128GB",
+        "price": 1600,
+        "quantity": 1,
+        "total": 1600
+    }
+]

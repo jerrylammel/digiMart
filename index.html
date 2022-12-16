@@ -17,7 +17,13 @@
                 <ul class="d-flex justify-content-between">
                     <li class="fs-4 align-self-center"><a id="logo" href="#">digiMart&#8482</a></li>
                     <li class="fs-4 align-self-center"><a href="#">About</a></li>
-                    <li class="fs-4 align-self-center"><a href="#">Contact<img src="resources/images/instagram_logo.png" alt="Contact Icon" id="contact"></a></li>
+                    <li class="fs-4 align-self-center">
+                        <a href="#">Contact<img src="resources/images/instagram_logo.png" alt="Contact Icon" id="contact"></a>
+                    </li>
+                    <li id="shopping-cart">
+                        <span id="item-amount">0</span>
+                        <a href=""><i onclick="displayCart(event)" class="far fa-shopping-cart fa-2x"></i></a>
+                    </li>
                 </ul>
             </nav>
         </div>
@@ -27,45 +33,42 @@
             <div id="greeting">
                 <h4>Welcome to <span>digiMart&#8482</span> ! Wish you enjoy our great products !</h4>
             </div>
-            <div id="products-container">
-                <!-- bootstrap grids -->
-                <div class="container product-container">
-                    <div id="card-list" class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 row-cols-xl-5">
-                    </div>  
-                </div>                 
+            <!-- bootstrap grids -->
+            <div id="product-container" class="container">
+                <div id="card-list" class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 row-cols-xl-5">
+                </div>  
             </div>
         </section>
-        <section id="cart">
+        <section id="cart" style="display:none;">
             <div id="cart-header">
-                <i class="far fa-shopping-cart fa-2x"></i>
                 <h4>Order detail</h4>
             </div>
             
             <div id="shopping-list" class="container text-start">
                 <div id="table-header" class="row fw-bold">
-                    <div class="col-4 border border-top-1 border-start-1 border-bottom-1 border-end-0 border-secondary">
+                    <div class="col-4 border border-0 border-secondary">
                     Item Name
                     </div>
-                    <div class="col-2 border border-top-1 border-start-1 border-bottom-1 border-end-0 border-secondary">
+                    <div class="col-2 border border-0 border-secondary">
                     Quantity
                     </div>
-                    <div class="col-2 border border-top-1 border-start-1 border-bottom-1 border-end-0 border-secondary">
+                    <div class="col-2 border border-0 border-secondary">
                     Price
                     </div>
-                    <div class="col-2 border border-top-1 border-start-1 border-bottom-1 border-end-0 border-secondary">
-                    Tototal
+                    <div class="col-2 border border-0 border-secondary">
+                    Sub-total
                     </div>
-                    <div class="col-2 border border-top-1 border-start-1 border-bottom-1 border-end-1 border-secondary">
+                    <div class="col-2 border border-0 border-secondary">
                     Action
                     </div>
                 </div>
                 <div id="table-total" class="row fw-bold">
-                    <div class="col-8 text-end border border-top-0 border-start-1 border-bottom-1 border-end-0 border-secondary">
+                    <div class="col-8 text-end border border-0 border-secondary">
                         Total
                     </div>
-                    <div id ="total-price" class="col-2 border border-top-0 border-start-1 border-bottom-1 border-end-0 border-secondary">
+                    <div id ="total-price" class="col-2 border border-0 border-secondary">
                     </div>
-                    <div id ="place-order" class="col-2 border border-top-0 border-start-1 border-bottom-1 border-end-1 border-secondary">
+                    <div id ="place-order" class="col-2 border border-0 border-secondary">
                         <button id="digimart-place-order" onclick="placeOrder(event)" >Place Order</button>
                     </div>
                 </div>

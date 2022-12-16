@@ -14,7 +14,7 @@ html {
 /* color settings */
 :root {
     --color-text-default: #232323;
-    --backgrouond-color-body: #aebdd5;
+    --backgrouond-color-body: #8C8C8C;
     --background-color-header: #E8E0DA;
     --background-color-products: #8C8C8C;
     --background-color-greeting: #E8E0DA;
@@ -68,12 +68,32 @@ header {
     font-weight: bold;
 }
 
+#shopping-cart {
+    display: flex;
+    flex-direction: column;
+    transform: translate(0, -15%);
+}
+
+.fa-shopping-cart {
+    width: 2rem;
+    margin: 0.5rem 1rem;
+    color: var(--color-greeting);
+    font-size: 2rem;
+}
+
+#item-amount {
+    margin-left: 0.5rem;
+    transform: translate(0, 70%);
+    color: red;
+}
+
 /* Main */
 main {
     height: 100vh;
     top: 4rem;
     position: relative;
     overflow-y: scroll;
+    background-color: var(--backgrouond-color-body);
 }
     /* products */
 #products {
@@ -89,11 +109,9 @@ main {
     text-align: center;
     color: var(--color-text-default);
     background-color: var(--background-color-greeting);
-    padding: 0.5rem;
+    padding: 0.3rem;
     position: relative;
     top: 1rem;
-    left: 50%;
-    transform: translate(-50%);    
     width: 100%;
     box-shadow: 5px 5px 10px 2px rgba(0,0,0,.8);
     opacity: 0.9;
@@ -104,15 +122,9 @@ main {
     font-weight: bold;
 }
 
-#products-container {
-    position: relative;
-    margin: 2rem 1rem 1rem 1rem;
-}
-
-#product-container {
-    display: flex;
+#product-container   {
     padding: 2rem;
-    height: 50vh;
+    height: auto;
     overflow-y: scroll;
     background-color: var(--background-color-products);
 }
@@ -123,9 +135,8 @@ main {
 }
 
 .card:hover {
-    scale: 1.1;
+    scale: 1.05;
     box-shadow: 0.5rem 0.5rem 0.5rem rgba(240, 198, 15, 0.8);
-    margin: 0.5rem;   
     opacity: 1;
 }
 
@@ -174,22 +185,16 @@ main {
 
     /* cart */
 #cart {
-    position: relative;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2rem;
+    box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.5);
+    border-radius: 0.5rem;
     background-color: var(--background-color-cart);
     height: 35vh;
     text-align: left;
-}
-
-#cart-header {
-    display: flex;
-    align-items: baseline;
-}
-
-.fa-shopping-cart {
-    width: 2rem;
-    margin: 0.5rem 1rem;
-    color: var(--color-greeting);
-    font-size: 2rem;
 }
 
 .input-item-quantity {

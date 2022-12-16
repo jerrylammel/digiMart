@@ -8,6 +8,15 @@ class CartManager {
         return this._products;
     }
 
+    get getNumberOfItems () {
+        let sum = 0;
+        this._products.forEach((product) => {
+            sum += product.quantity;
+        });
+
+        return sum;
+    }
+
     getProduct (id) {
         return this._products.filter((product) => product.id === id);
     }
@@ -32,19 +41,19 @@ class CartManager {
         productDiv.setAttribute('id', `${product.id}-item`);
         productDiv.setAttribute('class', 'row');
 
-        productDiv.innerHTML = `<div class="col-4 border border-top-0 border-start-1 border-bottom-1 border-end-0 border-secondary">
+        productDiv.innerHTML = `<div class="col-4 border border-0 border-secondary">
                             ${product.name}
                             </div>
-                            <div class="col-2 border border-top-0 border-start-1 border-bottom-1 border-end-0 border-secondary">
+                            <div class="col-2 border border-0 border-secondary">
                                 <input class="input-item-quantity" id="${product.id}-item-quantity" onchange="onUpdateQuantity(event)" type="number" value="${product.quantity}" min="0">
                             </div>
-                            <div class="col-2 border border-top-0 border-start-1 border-bottom-1 border-end-0 border-secondary">
+                            <div class="col-2 border border-0 border-secondary">
                             $${product.price}
                             </div>
-                            <div id="${product.id}-item-total" class="col-2 border border-top-0 border-start-1 border-bottom-1 border-end-0 border-secondary">
+                            <div id="${product.id}-item-total" class="col-2 border border-0 border-secondary">
                             $${product.total}
                             </div>
-                            <div class="col-2 border border-top-0 border-start-1 border-bottom-1 border-end-1 border-secondary">
+                            <div class="col-2 border border-0 border-secondary">
                                 <button class="btn-remove" id="${product.id}-remove" onclick="onRemoveProductFromCart(event)">Remove</button>
                             </div>`;
 

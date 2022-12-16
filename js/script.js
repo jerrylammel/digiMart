@@ -13,7 +13,7 @@ const createProductObj = (id) => {
 
 window.addToCart = function (event) {
     event.preventDefault();
-    // get digimark02 from id digimark02-addtocart
+    // get digimart02 from id digimart02-addtocart
     const productId = event.target.id.split('-')[0];
     const productObj = createProductObj(productId);
     const imgSrc = document.querySelector(`#${productId} img`).getAttribute('src');
@@ -31,7 +31,7 @@ window.addToCart = function (event) {
     const productInCart = myCart.getProduct(productObj.id);
     if (productInCart.length !== 0) {
         // same product is in shopping cart, upate quantity and totol price
-        const updatedProductObj = myCart.updateQuantityAndTotalPrice(productObj);
+        const updatedProductObj = myCart.addQuantity(productObj);
         myCart.updateProductHTML(updatedProductObj);
         myCart.updateTotalOfAllItems();
     } else {
@@ -45,10 +45,25 @@ window.addToCart = function (event) {
 
 window.onRemoveProductFromCart = function (event) {
     event.preventDefault();
-    // get digimark02 from id digimark02-remove
+    // get digimart02 from id digimart02-remove
     const productId = event.target.id.split('-')[0];
     myCart.removeProduct(productId);
     myCart.removepProductHtml(productId);
+    myCart.updateTotalOfAllItems();
+}
+
+window.onUpdateQuantity = function (event) {
+    event.preventDefault();
+
+    // digitmart02 from id digimart02--item-quantity
+    const productId = event.target.id.split('-')[0];
+    const productInCart = myCart.getProduct(productId)[0];
+    const quantity = event.target.value;
+    const price = new Number(productInCart.price);
+    productInCart.quantity = new Number(quantity);
+    productInCart.total = quantity * price;
+    const updatedProductObj = myCart.updateQuantity(productInCart);
+    myCart.updateProductHTML(updatedProductObj);
     myCart.updateTotalOfAllItems();
 }
 

@@ -65,6 +65,8 @@ window.addToCart = function (event) {
         myCart.renderProduct(productHTML);
         myCart.updateTotalOfAllItems();
     }
+
+    updateNumberOfItemsInCart(myCart.getNumberOfItems);
 }
 
 
@@ -75,6 +77,7 @@ window.onRemoveProductFromCart = function (event) {
     myCart.removeProduct(productId);
     myCart.removepProductHtml(productId);
     myCart.updateTotalOfAllItems();
+    updateNumberOfItemsInCart(myCart.getNumberOfItems);
 }
 
 window.onUpdateQuantity = function (event) {
@@ -90,9 +93,29 @@ window.onUpdateQuantity = function (event) {
     const updatedProductObj = myCart.updateQuantity(productInCart);
     myCart.updateProductHTML(updatedProductObj);
     myCart.updateTotalOfAllItems();
+    updateNumberOfItemsInCart(myCart.getNumberOfItems);
+}
+
+window.displayCart = function (event) {
+    event.preventDefault();
+    const shoppingCart = document.getElementById("cart");
+    const style = shoppingCart.getAttribute("style");
+    const newStyle = style.includes("display: block;") ? "display: none;" : "display: block;";
+    shoppingCart.setAttribute("style", newStyle);
+}
+
+window.placeOrder = function () {
+
+}
+
+const updateNumberOfItemsInCart = (number) => {
+    const itemAmount = document.getElementById("item-amount");
+    itemAmount.innerText = number;
 }
 
 const myCart = new CartManager('digiMart');
 myCart.loadStoredProducts();
 const allProductsInCart = myCart.getAllProducts;
 myCart.addAllProductsFromLocalStorage(allProductsInCart);
+const numberOfItems = myCart.getNumberOfItems;
+updateNumberOfItemsInCart(numberOfItems);

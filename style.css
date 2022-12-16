@@ -194,6 +194,7 @@ main {
 
 .input-item-quantity {
     background-color: var(--background-color-cart);
+    width: 100%;
 }
 
 .btn-remove {

@@ -39,7 +39,7 @@ class CartManager {
     addProductHTML(product) {
         const productDiv = document.createElement('div');
         productDiv.setAttribute('id', `${product.id}-item`);
-        productDiv.setAttribute('class', 'row');
+        productDiv.setAttribute('class', 'row shopping-item');
 
         productDiv.innerHTML = `<div class="col-4 border border-0 border-secondary">
                             ${product.name}

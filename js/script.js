@@ -104,6 +104,12 @@ window.displayCart = function (event) {
     shoppingCart.setAttribute("style", newStyle);
 }
 
+window.closeCart = function (event) {
+    event.preventDefault();
+    const shoppingCart = document.getElementById("cart");
+    shoppingCart.setAttribute("style", "display: none;");
+}
+
 window.placeOrder = function () {
 
 }

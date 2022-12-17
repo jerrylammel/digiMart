@@ -41,13 +41,15 @@ Product items added into the shopping cart will be loaded when the digiMart lanu
 Users can add a product into the shopping cart as many times as they want and quantity and total price of that product will be accumulated and updated.
 
 ### Details:
-1. Products are pre-populated. I hard coded HTML elements in the index.html file.
+1. Products are pre-populated, which is stored in a json file and be loaded when page launch.
 2. To display products for the user to choose from, I use card component in Bootstrap when I hard coded HTML elements for products.
-3. With hard coded HTML elements for products, for sure they will be displaed when the page loads.
+3. With hard coded data in a json file for products, for sure they will be displaed when the page loads.
 4. In every card for products, there is a button element. When users click on the button, an event handler will be called, which will add the product into the shopping cart.
 5. When a product added into the shopping cart, it's price and quantity will be included. The total price of items in the shopping list will be calculated and updated into the shopping cart.
 6. A Remove button is added for each item in the shopping cart. When users click on the Remove button, it's event handler will take this item off the shopping list and update the total price of items in the cart.
 7. Users can enter a quantity for a product before they add the product into the shopping cart. Also, users can change the quanity of a product in the shopping list. To enable this, an input in type of number is added into cards of products, as well as in the quantity sections of a product in the shopping list.
+8. Duplicated products added to the Cart will be consolidated, which will be displayed in one row. 
+9. Users can click the cart logo to pop up or close the shoppling list in the cart. User can also click the Close button at right-top of the shopping list to close it.
 
 ## Pending
 1. Add "," and decimal in currency strings

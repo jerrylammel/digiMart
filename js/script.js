@@ -10,12 +10,10 @@ fetch("../json/products.json")
                     <img src="${product.imgSrc}" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">${product.name}</h5>
-                        <h6 class="card-subtitle mb-2" id="${product.price}"><small>$ ${product.price}</small></h6>
+                        <h6 class="card-subtitle mb-1" id="${product.price}"><small>$ ${product.price}</small></h6>
                         <ul class="list-group list-group-flush">
-                            <li class="list-group-item ps-0 pe-0">
+                            <li class="add-to-cart list-group-item p0">
                                 <input type="number" id="${product.id}-quantity" value="1" min="1">
-                            </li>
-                            <li class="list-group-item ps-0 pe-0">
                                 <button id="${product.id}-addtocart}" onclick="addToCart(event)" class="add-to-cart-button">Add to cart</button>
                             </li>
                         </ul>

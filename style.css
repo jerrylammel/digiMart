@@ -13,10 +13,10 @@ html {
 
 /* color settings */
 :root {
-    --color-text-default: #232323;
-    --backgrouond-color-body: #8C8C8C;
+    --color-text-default: #383737;
+    --backgrouond-color-body: #b89a51;
     --background-color-header: #E8E0DA;
-    --background-color-products: #8C8C8C;
+    --background-color-products: #b89a51;
     --background-color-greeting: #E8E0DA;
     --color-greeting: #FF914D;
     --background-color-footer: #E8E0DA;
@@ -151,28 +151,32 @@ main {
     width: auto;
 }
 
+#card-list .list-group-item {
+    padding-top: 0;
+    padding-bottom: 0;
+    border: none;
+}
+
 .card-title {
     font-size: 1rem;
-}
-
-.card .custom-select, .card input {
-    font-size: 0.8rem;
-}
-
-.custom-select {
-    width: calc(60% - 0.5rem);
 }
 
 .card-body {
     padding: 0.5rem 1rem;
 }
 
+.add-to-cart {
+    display: flex;
+}
+
 .card input {
-    width: calc(60% - 0.5rem);;
+    width: calc(50% - 2.8rem);
+    margin: 0 1.4rem;
 }
 
 .add-to-cart-button { 
     padding: 0.2rem 0.4rem;
+    width: 50%;
     font-size: 0.6rem;
     font-weight: bold;
     border-radius: 0.4rem;
@@ -183,8 +187,7 @@ main {
     background-color:var(--background-color-addtocart-hover) !important;
     color: whitesmoke !important;
     transition: all 0.2s ease-in-out;
-    scale: 1.2;
-    margin: 0.2rem;
+    scale: 1.1;
 }
 
     /* cart */

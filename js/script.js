@@ -1,6 +1,6 @@
 import { CartManager } from './cart.js';
 
-fetch("../json/products.json")
+fetch("/digiMart/json/products.json")
     .then((data) => data.json())
     .then(products => {
         products.map((product) => {

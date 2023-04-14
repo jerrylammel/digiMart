@@ -80,11 +80,10 @@ header {
     transform: translate(0, -15%);
 }
 
-.fa-shopping-cart {
+.fa-cart-shopping {
     width: 2rem;
-    margin: 0.5rem 1rem;
+    margin: 1.5rem 1rem;
     color: var(--color-greeting);
-    font-size: 2rem;
 }
 
 #item-amount {
